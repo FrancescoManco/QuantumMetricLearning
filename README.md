@@ -8,12 +8,9 @@ The approach combines:
 - A **Siamese network** for embedding generation, using an **anchor-positive-negative triplet**.
 - **Classical CNN layers** for feature extraction.
 - **Dimensionality reduction** to an 8-dimensional feature space.
-- **Quantum circuit processing** via a layer inspired by **QuantumRBF**:
-  - Uses **YZ encoding**.
-  - Measures all qubits to generate a **16-dimensional embedding**.
-  - Includes a **learnable rescaling layer** (16x16).
+- **Quantum circuit processing** via a layer with TorchConnector:
 
-## Quantum Circuit
+## Initial Quantum Circuit
 - Encoding: **yz_angles_encoding**
 - Ansatz: **RealAmplitudes layers on 4 qubits**
 - Final measurement: **full qubit sampling** to generate feature distributions.
